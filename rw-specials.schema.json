@@ -1,0 +1,192 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"required": [
+		"achilles",
+		"assassinate",
+		"backstab",
+		"berserk",
+		"bleed",
+		"blindside",
+		"bloodlust",
+		"comeback",
+		"conserve",
+		"cripple",
+		"crusher",
+		"cupid",
+		"deadeye",
+		"deadly",
+		"disarm",
+		"double_tap",
+		"double-edged",
+		"empower",
+		"eviscerate",
+		"execute",
+		"expose",
+		"finale",
+		"focus",
+		"frenzy",
+		"fury",
+		"grace",
+		"home_run",
+		"irradiate",
+		"motivation",
+		"paralyze",
+		"parry",
+		"penetrate",
+		"plunder",
+		"powerful",
+		"proficience",
+		"puncture",
+		"quicken",
+		"rage",
+		"revitalize",
+		"roshambo",
+		"slow",
+		"smurf",
+		"specialist",
+		"stricken",
+		"stun",
+		"suppress",
+		"sure_shot",
+		"throttle",
+		"warlord",
+		"weaken",
+		"wind-up",
+		"wither"
+	],
+	"patternProperties": {
+		"^.+$": {
+			"type": ["object", "boolean"],
+			"oneOf": [
+				{
+					"allOf": [
+						{
+							"oneOf": [
+								{
+									"required": [
+										"type",
+										"weapon",
+										"range_lower",
+										"range_upper",
+										"line",
+										"isPercentage",
+										"id"
+									],
+									"not": {
+										"required": ["weapons", "weapon_types"]
+									}
+								},
+								{
+									"required": [
+										"type",
+										"weapon_types",
+										"range_lower",
+										"range_upper",
+										"line",
+										"isPercentage",
+										"id"
+									],
+									"not": {
+										"required": ["weapon", "weapons"]
+									}
+								},
+								{
+									"required": [
+										"type",
+										"weapons",
+										"range_lower",
+										"range_upper",
+										"line",
+										"isPercentage",
+										"id"
+									],
+									"not": {
+										"required": ["weapon", "weapon_types"]
+									}
+								}
+							]
+						},
+						{
+							"oneOf": [
+								{
+									"properties": {
+										"range_lower": {
+											"type": "number"
+										},
+										"range_upper": {
+											"type": "number"
+										},
+										"line": {
+											"type": "string",
+											"pattern": "^.*%s.*$"
+										}
+									}
+								},
+								{
+									"properties": {
+										"range_lower": {
+											"type": "null"
+										},
+										"range_upper": {
+											"type": "null"
+										},
+										"line": {
+											"type": "string"
+										}
+									}
+								}
+							]
+						}
+					]
+				},
+				{
+					"properties": {
+						"type": {
+							"type": "boolean"
+						}
+					}
+				}
+			],
+
+			"properties": {
+				"type": {
+					"type": "string"
+				},
+				"weapon": { "type": "number" },
+				"weapons": {
+					"type": "array",
+					"items": {
+						"type": "number"
+					}
+				},
+				"weapon_types": {
+					"type": "array",
+
+					"items": {
+						"type": "string",
+						"enum": [
+							"CL",
+							"PI",
+							"PS",
+							"RF",
+							"SG",
+							"SL",
+							"SM",
+							"MG",
+							"HA"
+						],
+						"additionalItems": false
+					}
+				},
+				"isPercentage": {
+					"type": ["boolean", "null"]
+				},
+				"id": {
+					"type": "number"
+				}
+			}
+		}
+	},
+	"additionalProperties": false
+}

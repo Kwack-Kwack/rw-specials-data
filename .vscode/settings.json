@@ -1,0 +1,10 @@
+{
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"rw-specials.json"
+			],
+			"url": "./rw-specials.schema.json"
+		}
+	]
+}
