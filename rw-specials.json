@@ -86,7 +86,7 @@
 		"type": "Passive",
 		"range_lower": null,
 		"range_upper": null,
-		"line": null,
+		"line": "Re-equips a single temporary item if available in inventory",
 		"is_percentage": null
 	},
 	"toxin": {
@@ -346,7 +346,7 @@
 		"type": "Enemy Debuff",
 		"range_lower": null,
 		"range_upper": null,
-		"is_percentage": false,
+		"is_percentage": null,
 		"id": 65,
 		"line": "Applies radiation sickness upon finishing hit"
 	},
@@ -584,7 +584,7 @@
 		"line": "Double damage but takes a turn to recharge",
 		"range_lower": null,
 		"range_upper": null,
-		"is_percentage": false,
+		"is_percentage": null,
 		"type": "Buff"
 	},
 	"insanity": {
