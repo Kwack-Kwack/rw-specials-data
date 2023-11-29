@@ -70,7 +70,7 @@
 										"range_lower",
 										"range_upper",
 										"line",
-										"isPercentage",
+										"is_percentage",
 										"id"
 									],
 									"not": {
@@ -84,7 +84,7 @@
 										"range_lower",
 										"range_upper",
 										"line",
-										"isPercentage",
+										"is_percentage",
 										"id"
 									],
 									"not": {
@@ -98,7 +98,7 @@
 										"range_lower",
 										"range_upper",
 										"line",
-										"isPercentage",
+										"is_percentage",
 										"id"
 									],
 									"not": {
@@ -179,7 +179,7 @@
 						"additionalItems": false
 					}
 				},
-				"isPercentage": {
+				"is_percentage": {
 					"type": ["boolean", "null"]
 				},
 				"id": {
