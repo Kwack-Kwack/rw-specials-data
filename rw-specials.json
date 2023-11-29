@@ -69,7 +69,7 @@
 		"range_lower": 15,
 		"range_upper": 16,
 		"line": "Increases happiness by %s of maximum upon the final hit of an opponent",
-		"isPercentage": null
+		"isPercentage": true
 	},
 	"hazardous": {
 		"id": 10,
@@ -584,7 +584,7 @@
 		"line": "Double damage but takes a turn to recharge",
 		"range_lower": null,
 		"range_upper": null,
-		"isPercentage": null,
+		"isPercentage": false,
 		"type": "Buff"
 	},
 	"insanity": {
